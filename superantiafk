@@ -1,7 +1,11 @@
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
+local locker = Instance.new("TextButton")
+local unlocker = Instance.new("TextButton")
+
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -32,8 +36,27 @@ TextLabel_2.Text = "working"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextSize = 14.000
 
+locker.Name = "locker"
+locker.Parent = Frame
+locker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+locker.Position = UDim2.new(0, 0, 0.339449555, 0)
+locker.Size = UDim2.new(0.404254824, 0, 0.311926603, 0)
+locker.Font = Enum.Font.SourceSans
+locker.Text = "fps locker"
+locker.TextColor3 = Color3.fromRGB(0, 0, 0)
+locker.TextSize = 14.000
 
-local function KVJYAN_fake_script() 
+unlocker.Name = "unlocker"
+unlocker.Parent = Frame
+unlocker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+unlocker.Position = UDim2.new(0.59042567, 0, 0.339449406, 0)
+unlocker.Size = UDim2.new(0.409574538, 0, 0.311926603, 0)
+unlocker.Font = Enum.Font.SourceSans
+unlocker.Text = "fps unlocker"
+unlocker.TextColor3 = Color3.fromRGB(0, 0, 0)
+unlocker.TextSize = 14.000
+
+local function SCVO_fake_script() 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Frame = script.Parent
@@ -41,25 +64,8 @@ local function KVJYAN_fake_script()
 	Frame.Active = true 
 	Frame.Draggable = true
 end
-coroutine.wrap(KVJYAN_fake_script)()
-local function YWASTNS_fake_script() 
-	local script = Instance.new('LocalScript', Frame)
-
-	local NotificationBindable = Instance.new("BindableFunction")
-	NotificationBindable.OnInvoke = callback
-	--
-	game.StarterGui:SetCore("SendNotification",  {
-		Title = "thx for using me";
-		Text = "sub to my yt";
-		Icon = "";
-		Duration = 5;
-		Button1 = "no";
-		Button2 = "no";
-		Callback = NotificationBindable;
-	})
-end
-coroutine.wrap(YWASTNS_fake_script)()
-local function AONNB_fake_script() 
+coroutine.wrap(SCVO_fake_script)()
+local function UYWGUMW_fake_script() 
 	local script = Instance.new('LocalScript', Frame)
 
 	local bb=game:service'VirtualUser'
@@ -67,10 +73,26 @@ local function AONNB_fake_script()
 		bb:CaptureController()bb:ClickButton2(Vector2.new())
 	end)
 end
-coroutine.wrap(AONNB_fake_script)()
-local function XDHNQ_fake_script()  
+coroutine.wrap(UYWGUMW_fake_script)()
+local function JPEXTLB_fake_script() 
 	local script = Instance.new('LocalScript', Frame)
 
 	setclipboard("https://www.youtube.com/@fozion8329 ")
 end
-coroutine.wrap(XDHNQ_fake_script)()
+coroutine.wrap(JPEXTLB_fake_script)()
+local function ZHKU_fake_script() 
+	local script = Instance.new('LocalScript', locker)
+
+	locker.MouseButton1Down:connect(function()
+		setfpscap(10)
+	end)
+end
+coroutine.wrap(ZHKU_fake_script)()
+local function PDPPGEI_fake_script()  
+	local script = Instance.new('LocalScript', unlocker)
+
+	unlocker.MouseButton1Down:connect(function()
+		setfpscap(360)
+	end)
+end
+coroutine.wrap(PDPPGEI_fake_script)()
